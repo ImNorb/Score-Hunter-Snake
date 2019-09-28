@@ -7,7 +7,22 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Score Hunter Snake" Height="400" Width="600" ResizeMode="NoResize">
-    <Grid>
-        
+    <Grid Background="Black">
+
+        <Grid x:Name="Welcome" Visibility="Visible">
+            <Label Content="Score Hunter Snake" VerticalAlignment="Top" HorizontalAlignment="Center"  FontSize="60" Foreground="#FF007F7F" Margin="0, 65"/>
+            <Label Content="by Norbert Szűcs" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="15" Foreground="#FF007F7F" Margin="280,130,0,0"/>
+
+            <Label Content="Enter Your Name" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Foreground="LightGray" Margin="0, 20, 0, 0" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 100, 0, 0">
+                <TextBox x:Name="tbPlayerName" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" FontSize="25" Background="#FF007F7F" Margin="5, 0" KeyDown="tbPlayerName_KeyDown" />
+                <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="60" FontSize="25" Background="#FF007F7F" Content="Ok" BorderBrush="{x:Null}" Click="SetName_Click" />
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center" Margin="0, 300, 0, 0">
+                <Button Width="200" Height="50" Content="Exit to Desktop" FontSize="25" Margin="5" Click="btnExit_Click" Background="#FF007F7F" BorderBrush="{x:Null}"/>
+            </StackPanel>
+        </Grid>
+
     </Grid>
 </Window>
