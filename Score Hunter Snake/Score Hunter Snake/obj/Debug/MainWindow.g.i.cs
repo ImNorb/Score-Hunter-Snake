@@ -78,6 +78,9 @@ namespace Score_Hunter_Snake {
         internal System.Windows.Controls.Button btnScoreHunt;
         internal System.Windows.Controls.Button btnHighscore;
         internal System.Windows.Controls.Button btnExit;
+        internal System.Windows.Controls.Grid Game;
+        internal System.Windows.Controls.Canvas gameCanvas;
+        internal System.Windows.Controls.Label lblScore;
     }
 }
 
