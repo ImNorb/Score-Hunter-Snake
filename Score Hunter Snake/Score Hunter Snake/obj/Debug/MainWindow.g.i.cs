@@ -73,6 +73,11 @@ namespace Score_Hunter_Snake {
 
         internal System.Windows.Controls.Grid Welcome;
         internal System.Windows.Controls.TextBox tbPlayerName;
+        internal System.Windows.Controls.Grid Menu;
+        internal System.Windows.Controls.Button btnClassic;
+        internal System.Windows.Controls.Button btnScoreHunt;
+        internal System.Windows.Controls.Button btnHighscore;
+        internal System.Windows.Controls.Button btnExit;
     }
 }
 
