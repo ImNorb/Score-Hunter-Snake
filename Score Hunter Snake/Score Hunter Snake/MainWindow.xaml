@@ -35,7 +35,7 @@
             </StackPanel>
         </Grid>
 
-        <Grid x:Name="Game" Visibility="Visible">
+        <Grid x:Name="Game" Visibility="Hidden">
             <Canvas x:Name="gameCanvas" Background="Black"  HorizontalAlignment="Stretch" MaxWidth="600" MaxHeight="400" />
             <Label x:Name="lblScore" VerticalAlignment="Top" HorizontalAlignment="Left" Height="40" FontSize="20" Foreground="Aqua" Width="130" Margin="10,10,0,0" Opacity="0.5">
                 <Label.Content>
@@ -45,6 +45,22 @@
                     </TextBlock>
                 </Label.Content>
             </Label>
+        </Grid>
+
+        <Grid x:Name="GameOver" Visibility="Visible">
+            <Label Content="Game Over" VerticalAlignment="Top" HorizontalAlignment="Center"  FontSize="60" Foreground="DarkRed" Margin="0, 65"/>
+            <Label x:Name="lblGameOverScore" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25" Foreground="LightGray" Margin="0,150,0,0">
+                <Label.Content>
+                    <TextBlock>
+                            <Run Text="Your Score:"/>
+                            <Run Text="{Binding EndScore}"/>
+                    </TextBlock>
+                </Label.Content>
+            </Label>
+            <StackPanel HorizontalAlignment="Center" Margin="0, 200, 0, 0">
+                <Button Width="200" Height="50" Content="Main Menu" FontSize="25" Margin="5" Click="btnMainMenu_Click" Background="#FF007F7F" BorderBrush="{x:Null}"/>
+                <Button Width="200" Height="50" Content="Exit to Desktop" FontSize="25" Margin="5" Click="btnExit_Click" Background="#FF007F7F" BorderBrush="{x:Null}"/>
+            </StackPanel>
         </Grid>
 
     </Grid>
