@@ -9,7 +9,7 @@
         Title="Score Hunter Snake" Height="400" Width="600" ResizeMode="NoResize">
     <Grid Background="Black">
 
-        <Grid x:Name="Welcome" Visibility="Hidden">
+        <Grid x:Name="Welcome" Visibility="Visible">
             <Label Content="Score Hunter Snake" VerticalAlignment="Top" HorizontalAlignment="Center"  FontSize="60" Foreground="#FF007F7F" Margin="0, 65"/>
             <Label Content="by Norbert Szűcs" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="15" Foreground="#FF007F7F" Margin="280,130,0,0"/>
 
@@ -63,7 +63,7 @@
             </StackPanel>
         </Grid>
 
-        <Grid x:Name="Highscore" Visibility="Visible">
+        <Grid x:Name="Highscore" Visibility="Hidden">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
                 <Label Width="220" Margin="5, 5" HorizontalContentAlignment="Center" Content="Classic" VerticalAlignment="Top" HorizontalAlignment="Center"  FontSize="20" Foreground="#FF007F7F" />
                 <Label Width="220" Margin="5, 5" HorizontalContentAlignment="Center" Content="Score Hunt" VerticalAlignment="Top" HorizontalAlignment="Center"  FontSize="20" Foreground="#FF007F7F" />
