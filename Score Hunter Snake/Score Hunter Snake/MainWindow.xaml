@@ -47,7 +47,7 @@
             </Label>
         </Grid>
 
-        <Grid x:Name="GameOver" Visibility="Visible">
+        <Grid x:Name="GameOver" Visibility="Hidden">
             <Label Content="Game Over" VerticalAlignment="Top" HorizontalAlignment="Center"  FontSize="60" Foreground="DarkRed" Margin="0, 65"/>
             <Label x:Name="lblGameOverScore" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25" Foreground="LightGray" Margin="0,150,0,0">
                 <Label.Content>
@@ -58,6 +58,36 @@
                 </Label.Content>
             </Label>
             <StackPanel HorizontalAlignment="Center" Margin="0, 200, 0, 0">
+                <Button Width="200" Height="50" Content="Main Menu" FontSize="25" Margin="5" Click="btnMainMenu_Click" Background="#FF007F7F" BorderBrush="{x:Null}"/>
+                <Button Width="200" Height="50" Content="Exit to Desktop" FontSize="25" Margin="5" Click="btnExit_Click" Background="#FF007F7F" BorderBrush="{x:Null}"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="Highscore" Visibility="Visible">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Label Width="220" Margin="5, 5" HorizontalContentAlignment="Center" Content="Classic" VerticalAlignment="Top" HorizontalAlignment="Center"  FontSize="20" Foreground="#FF007F7F" />
+                <Label Width="220" Margin="5, 5" HorizontalContentAlignment="Center" Content="Score Hunt" VerticalAlignment="Top" HorizontalAlignment="Center"  FontSize="20" Foreground="#FF007F7F" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <DataGrid x:Name="dgClassic" Height="195" Width="220" Margin="5, 40" HorizontalAlignment="Center" VerticalAlignment="Top" RowHeight="21" AutoGenerateColumns="False" Background="#FF007F7F" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Width="10" Header="#" Binding="{Binding Place}" />
+                        <DataGridTextColumn Width="*" Header="Name" Binding="{Binding Name}" />
+                        <DataGridTextColumn Width="*" Header="Score" Binding="{Binding Score}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <DataGrid x:Name="dgScoreHunt" Height="195" Width="220" Margin="5, 40" HorizontalAlignment="Center" VerticalAlignment="Top" RowHeight="21" ColumnWidth="100" AutoGenerateColumns="False" Background="#FF007F7F" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Width="10" Header="#" Binding="{Binding Place}" />
+                        <DataGridTextColumn Width="*" Header="Name" Binding="{Binding Name}" />
+                        <DataGridTextColumn Width="*" Header="Score" Binding="{Binding Score}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center" Margin="0, 240, 0, 0">
                 <Button Width="200" Height="50" Content="Main Menu" FontSize="25" Margin="5" Click="btnMainMenu_Click" Background="#FF007F7F" BorderBrush="{x:Null}"/>
                 <Button Width="200" Height="50" Content="Exit to Desktop" FontSize="25" Margin="5" Click="btnExit_Click" Background="#FF007F7F" BorderBrush="{x:Null}"/>
             </StackPanel>

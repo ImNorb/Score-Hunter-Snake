@@ -83,6 +83,9 @@ namespace Score_Hunter_Snake {
         internal System.Windows.Controls.Label lblScore;
         internal System.Windows.Controls.Grid GameOver;
         internal System.Windows.Controls.Label lblGameOverScore;
+        internal System.Windows.Controls.Grid Highscore;
+        internal System.Windows.Controls.DataGrid dgClassic;
+        internal System.Windows.Controls.DataGrid dgScoreHunt;
     }
 }
 
