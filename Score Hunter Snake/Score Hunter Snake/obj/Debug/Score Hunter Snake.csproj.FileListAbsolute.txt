@@ -1,0 +1,18 @@
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\bin\Debug\Score Hunter Snake.exe.config
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\bin\Debug\Score Hunter Snake.exe
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\bin\Debug\Score Hunter Snake.pdb
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\bin\Debug\RestSharp.dll
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\bin\Debug\RestSharp.xml
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\obj\Debug\Score Hunter Snake.csprojAssemblyReference.cache
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\obj\Debug\MainWindow.g.cs
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\obj\Debug\App.g.cs
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\obj\Debug\Score Hunter Snake_MarkupCompile.cache
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\obj\Debug\Score Hunter Snake_MarkupCompile.lref
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\obj\Debug\MainWindow.baml
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\obj\Debug\Score Hunter Snake.g.resources
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\obj\Debug\Score_Hunter_Snake.Properties.Resources.resources
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\obj\Debug\Score Hunter Snake.csproj.GenerateResource.cache
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\obj\Debug\Score Hunter Snake.csproj.CoreCompileInputs.cache
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\obj\Debug\Score Hunter Snake.csproj.CopyComplete
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\obj\Debug\Score Hunter Snake.exe
+d:\Developement\GitProjects\Score-Hunter-Snake\Score Hunter Snake\Score Hunter Snake\obj\Debug\Score Hunter Snake.pdb

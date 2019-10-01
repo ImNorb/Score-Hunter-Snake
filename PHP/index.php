@@ -12,8 +12,12 @@ if(getAuth('admin')) {
 			saveGame($_GET['M']);
 		break;
 
+		case "PUT":
+			jsonApp('CONNECTED');
+		break;
+
 		default:
-		header("HTTP/1.0 405 Method Not Allowed");	
+			header("HTTP/1.0 405 Method Not Allowed");	
 		break;
 	}
 } else jsonApp('WRONG AUTH INFO');

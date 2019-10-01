@@ -7,12 +7,21 @@ using RestSharp;
 namespace Score_Hunter_Snake {
     class RestAPI {
 
-        String URL = ConfigurationManager.AppSettings["RestUrl"];
-        String ROUTE = "index.php?A="+ConfigurationManager.AppSettings["RestAuth"];
+        private String URL = ConfigurationManager.AppSettings["RestUrl"];
+        private String ROUTE = "index.php?A="+ConfigurationManager.AppSettings["RestAuth"];
+
+        private static RestClient client;
+        private static RestRequest request;
+
+        public RestAPI() {
+            client = new RestClient(URL);
+            request = new RestRequest(ROUTE, Method.PUT);
+            IRestResponse response = client.Execute(request);
+            if (!response.Content.ToUpper().Contains("CONNECTED")) throw new Exception("Connection Error");
+        }
 
         public bool SaveData(string name, int score, bool gameMode) {
-            var client = new RestClient(URL);
-            var request = new RestRequest(ROUTE + "&M=" + (gameMode ? "c" : "sh"), Method.POST);
+            request = new RestRequest(ROUTE + "&M=" + (gameMode ? "c" : "sh"), Method.POST);
             request.RequestFormat = DataFormat.Json;
             request.AddBody(new Scoreboard {
                 Name = name,
@@ -20,20 +29,15 @@ namespace Score_Hunter_Snake {
             });
 
             IRestResponse response = client.Execute(request);
-            if (response.Content.Contains("WRONG AUTH INFO"))
-                return false;
-
-            if (response.Content == "true")
-                return true;
-
+            if (response.Content.ToUpper().Contains("WRONG AUTH INFO")) return false;
+            if (response.Content == "true") return true;
             return false;
         }
 
         public List<Scoreboard> LoadData(bool gameMode) {
-            var client = new RestClient(URL);
-            var request = new RestRequest(ROUTE + "&M=" + (gameMode ? "c" : "sh"), Method.GET);
+            request = new RestRequest(ROUTE + "&M=" + (gameMode ? "c" : "sh"), Method.GET);
             IRestResponse<Scoreboard> response = client.Execute<Scoreboard>(request);
-            if (!response.Content.Contains("WRONG AUTH INFO")) {
+            if (!response.Content.ToUpper().Contains("WRONG AUTH INFO")) {
                 if (response.Content != "[]") {
                     List<Scoreboard> scores = new List<Scoreboard>();
                     var content = response.Content.Replace("},{", "|").Split('|');
